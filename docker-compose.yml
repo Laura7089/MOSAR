@@ -1,0 +1,16 @@
+---
+
+version: "3.4"
+
+services:
+  morse:
+    build:
+      context: .
+    container_name: morse_mosar
+    devices:
+      - /dev/snd
+    stdin_open: true
+    tty: true
+    volumes:
+      - ".:/source"
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
